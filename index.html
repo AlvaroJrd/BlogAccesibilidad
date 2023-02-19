@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layout responsive</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link id="tema-estilo" rel="stylesheet" type="text/css" href="styles/claro.css">
+  <script defer src="js/utils.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- MODAL -->
+  <div class="modal fade" id="ModalForm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="myform bg-dark bg-opacity-50">
+            <h1 class="text-center">LOGIN</h1>
+            <form>
+              <div class="mb-3 mt-4">
+                <label for="inputEmail" class="form-label">Dirección de correo</label>
+                <input type="email" class="form-control" id="inputEmail"/>
+              </div>
+              <div class="mb-3">
+                <label for="inputPass" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="inputPass" />
+              </div>
+              <button type="submit" class="btn btn-light mt-3">INICIAR SESION</button>
+              <div class="my-3 form-check">
+                <input type="checkbox" class="form-check-input" id="checkLogin" />
+                <label class="form-check-label" for="checkLogin"><small>Recuerdame</small></label>
+              </div>
+              <p><a href="#">No recuerdo la contraseña</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END MODAL-->
+  <div class="container-fluid">
+    <header class="row">
+      <img class="logo col-1" src="img/logo.svg" alt="" />
+      <h1 class="col-10 text-center">RUNNING POR EL MUNDO</h1>
+      <button class="col" id="switchBtn">Cambiar tema</button>
+    </header>
+    <nav class="row">
+      <ul class="m-0">
+        <li>
+          <a href="index.html"><i class="bi bi-house mx-2"></i>Inicio</a>
+        </li>
+        <li>
+          <a id="login" data-bs-toggle="modal" data-bs-target="#ModalForm"><i
+              class="bi bi-box-arrow-in-right mx-2"></i>Login</a>
+        </li>
+        <li><a href="register.html">Register</a></li>
+        <li>
+          <a href=""><i class="bi bi-file-earmark-plus mx-2"></i>Crear nueva
+            entrada</a>
+        </li>
+        <li>
+          <div class="input-group col p-2">
+            <button type="button" data-bs-toggle="collapse" data-bs-target=".collapseInput" aria-expanded="false"
+              class="input-group-text" id="basic-addon1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                </path>
+              </svg>
+            </button>
+            <input type="text" class="form-control collapse collapse-horizontal collapseInput" placeholder="Buscar"
+              aria-label="Search" aria-describedby="basic-addon1" />
+            <button type="button" data-bs-toggle="collapse" data-bs-target=".collapseInput"
+              aria-expanded="false"
+              class="input-group-text collapse collapse-horizontal input-group-text text-center collapseInput"
+              aria-label="Close">X</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!--<div>
+        <video autoplay muted loop id="myVideo">
+          <source src="img/video.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción del video en HTML5
+        </video>
+
+        <div class="contentVideo" id="contentVideo">
+          <h1>Heading</h1>
+          <p class="texto_animado">
+            Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat
+            phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum
+            maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore
+            latine molestiae, ad mutat oblique delicatissimi pro.
+          </p>
+          <button type="button" class="myBtn" id="myPauseBtn">Pause</button>
+        </div>
+        <button
+            type="button"
+            id="myCloseBtn"
+            class="btn-close btn-close-white"
+            aria-label="Close"
+          ></button>
+      </div>-->
+    <div class="row">
+      <div class="articulos col-10 px-5">
+        <section>
+          <div class="row">
+            <header>ARTICULOS DESTACADOS</header>
+            <div class="col-8">
+              <h5 class="mt-3">Artículo 1</h5>
+              <article class="mt-1 textArt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque at ultricies eros. Nullam nulla mauris, maximus
+                in tincidunt nec, consequat eu ex. In massa augue, hendrerit
+                et scelerisque et, laoreet ac enim. Phasellus leo ipsum,
+                vulputate ac laoreet vitae, pellentesque eu ex. Maecenas et
+                mauris eget mi molestie faucibus eu eu lorem. Integer enim
+                lacus, ultrices sit amet arcu quis, tempor interdum nulla.
+                Etiam auctor justo eget nulla bibendum egestas. Proin mi
+                augue, commodo quis interdum id, convallis sit amet nibh.
+                Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat
+                phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum
+                maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore
+                latine molestiae, ad mutat oblique delicatissimi pro.
+                Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat
+                phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum
+                maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore
+                latine molestiae, ad mutat oblique delicatissimi pro.
+                Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat
+                phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum
+                maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore
+                latine molestiae, ad mutat oblique delicatissimi pro.
+              </article>
+              <div class="row text-center">
+                <div class="col-2 border border-dark rounded-start-3 mx-2"><i class="bi bi-heart-fill mx-1"></i>20K
+                </div>
+                <div class="col-2 border border-dark mx-2"><i class="bi bi-chat-left-text mx-1"></i>3K</div>
+                <div class="col-2 border border-dark rounded-end-3 mx-2"><i class="bi bi-eye mx-1"></i>41K</div>
+              </div>
+            </div>
+            <div class="imagen col mt-3">
+              <img src="img/creative_commons.jpg" alt="creative_commons" />
+              <br />
+              <a href="https://www.pexels.com/es-ES/creative-commons-images/" target="_blank">Uso gratuito (CC0)</a>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section>
+          <div class="row">
+            <div class="col-8">
+              <h5 class="mt-3">Artículo 2</h5>
+              <article class="mt-1 textArt">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque at ultricies eros. Nullam nulla mauris, maximus
+                in tincidunt nec, consequat eu ex. In massa augue, hendrerit
+                et scelerisque et, laoreet ac enim. Phasellus leo ipsum,
+                vulputate ac laoreet vitae, pellentesque eu ex. Maecenas et
+                mauris eget mi molestie faucibus eu eu lorem. Integer enim
+                lacus, ultrices sit amet arcu quis, tempor interdum nulla.
+                Etiam auctor justo eget nulla bibendum egestas. Proin mi
+                augue, commodo quis interdum id, convallis sit amet nibh.
+                Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat
+                phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum
+                maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore
+                latine molestiae, ad mutat oblique delicatissimi pro.
+                Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat
+                phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum
+                maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore
+                latine molestiae, ad mutat oblique delicatissimi pro.
+                Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat
+                phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum
+                maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore
+                latine molestiae, ad mutat oblique delicatissimi pro.
+              </article>
+              <div class="row text-center">
+                <div class="col-2 border border-dark rounded-start-3 mx-2"><i class="bi bi-heart-fill mx-1"></i>17K
+                </div>
+                <div class="col-2 border border-dark mx-2"><i class="bi bi-chat-left-text mx-1"></i>5K</div>
+                <div class="col-2 border border-dark rounded-end-3 mx-2"><i class="bi bi-eye mx-1"></i>55K</div>
+              </div>
+            </div>
+            <div class="imagen col">
+              <img src="img/copyleft.jpg" alt="copyleft" /> <br />
+              <a href="https://pixabay.com/es/service/terms/" target="_blank">Pixabay License</a>
+            </div>
+          </div>
+          <footer class="mt-4">
+            <a href="">Explorar otros artículos</a>
+          </footer>
+        </section>
+      </div>
+      <div class="sidebars col">
+        <aside class="w-100 row">
+          <img class="banner" id="myImg" src="img/banner.png" alt="banner-descuento" />
+          <div id="redes" class="mt-4">
+            <p class="text-center">Siguenos en nuestras redes sociales</p>
+            <div class="row">
+              <i class="bi bi-twitter col-2"></i>
+              <i class="bi bi-facebook col-2"></i>
+              <i class="bi bi-twitch col-2"></i>
+              <i class="bi bi-pinterest col-2"></i>
+              <i class="bi bi-instagram col-2"></i>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer class="col-12">
+        <div class="footer-menu col-11">
+          <ul class="f-menu row">
+            <li>Dirección: C\ Blas Infante nº89</li>
+            <li><a href="">Sobre nosotros</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          Derechos: <br />
+          <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"><img src="img/88x31.png"
+              alt="licencia" class="licencia_footer" /></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+</body>
+
+</html>
