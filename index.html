@@ -23,7 +23,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <button type="button" name="cerrarModal" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           <div class="myform bg-dark bg-opacity-50">
             <h1 class="text-center">LOGIN</h1>
             <form>
@@ -35,7 +35,7 @@
                 <label for="inputPass" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="inputPass" />
               </div>
-              <button type="submit" name="iniciarSesion" class="btn btn-light mt-3">INICIAR SESION</button>
+              <button type="submit" class="btn btn-light mt-3">INICIAR SESION</button>
               <div class="my-3 form-check">
                 <input type="checkbox" class="form-check-input" id="checkLogin" />
                 <label class="form-check-label" for="checkLogin"><small>Recuerdame</small></label>
@@ -52,7 +52,10 @@
     <header class="row">
       <img class="logo col-1" src="img/logo.svg" alt="" />
       <h1 class="col-10 text-center">RUNNING POR EL MUNDO</h1>
-      <button class="col" id="switchBtn">Cambiar tema</button>
+      <label class="col" id="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+    </label>
     </header>
     <nav class="row">
       <ul class="m-0">
@@ -70,8 +73,8 @@
         </li>
         <li>
           <div class="input-group col p-2">
-            <button type="button" name="buscar" data-bs-toggle="collapse" data-bs-target=".collapseInput" aria-expanded="false"
-              class="input-group-text" id="basic-addon1">
+            <button type="button" data-bs-toggle="collapse" data-bs-target=".collapseInput" aria-expanded="false"
+              class="input-group-text">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
                 viewBox="0 0 16 16">
                 <path
@@ -80,7 +83,7 @@
               </svg>
             </button>
             <input type="text" class="form-control collapse collapse-horizontal collapseInput" placeholder="Buscar"
-              aria-label="Search" aria-describedby="basic-addon1" />
+              aria-label="Search"/>
             <button type="button" data-bs-toggle="collapse" data-bs-target=".collapseInput"
               aria-expanded="false"
               class="input-group-text collapse collapse-horizontal input-group-text text-center collapseInput"
@@ -118,7 +121,7 @@
           <div class="row">
             <header>ARTICULOS DESTACADOS</header>
             <div class="col-8">
-              <h5 class="mt-3">Artículo 1</h5>
+              <h2 class="mt-3">Artículo 1</h2>
               <article class="mt-1 textArt">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Pellentesque at ultricies eros. Nullam nulla mauris, maximus
@@ -160,7 +163,7 @@
         <section>
           <div class="row">
             <div class="col-8">
-              <h5 class="mt-3">Artículo 2</h5>
+              <h2 class="mt-3">Artículo 2</h2>
               <article class="mt-1 textArt">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Pellentesque at ultricies eros. Nullam nulla mauris, maximus

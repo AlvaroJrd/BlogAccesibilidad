@@ -4,6 +4,7 @@ var pauseBtn = document.getElementById("myPauseBtn");
 var closeBtn = document.getElementById("myCloseBtn");
 var switchBtn = document.getElementById("switchBtn");
 var contentVideo = document.getElementById("contentVideo");
+const colorSwitch = document.querySelector('#switch input[type="checkbox"]');
 
 pauseBtn.onclick = () => {
   if (video.paused) {
@@ -21,14 +22,11 @@ closeBtn.onclick = () => {
   closeBtn.className = "ocultar";
 }
 
-switchBtn.onclick = () => {
-  var tema = document.getElementById("tema-estilo");
-  var boton = document.getElementById("boton-tema");
-  if (tema.getAttribute("href") == "claro.css") {
-    tema.href = "oscuro.css";
-    boton.innerHTML = "Tema claro";
-  } else {
-    tema.href = "claro.css";
-    boton.innerHTML = "Tema oscuro";
-  }
+colorSwitch.onchange = (ev) => {
+    if(ev.target.checked){
+        document.documentElement.setAttribute('tema', 'light');
+    } else {
+        document.documentElement.setAttribute('tema', 'dark');
+    }
 }
+colorSwitch.addEventListener('change', cambiaTema);

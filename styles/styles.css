@@ -16,6 +16,10 @@ h1 {
   font-family: Copperplate,Copperplate Gothic Light,fantasy; 
 }
 
+h2{
+  font-size: 1.25rem !important;
+}
+
 
 /* NAV */
 nav {
