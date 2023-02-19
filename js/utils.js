@@ -21,12 +21,3 @@ closeBtn.onclick = () => {
   contentVideo.className = "ocultar";
   closeBtn.className = "ocultar";
 }
-
-colorSwitch.onchange = (ev) => {
-    if(ev.target.checked){
-        document.documentElement.setAttribute('tema', 'light');
-    } else {
-        document.documentElement.setAttribute('tema', 'dark');
-    }
-}
-colorSwitch.addEventListener('change', cambiaTema);
