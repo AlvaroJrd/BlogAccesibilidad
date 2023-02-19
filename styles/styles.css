@@ -33,7 +33,7 @@ nav ul {
 }
 
 nav li a,
-nav li div {
+nav li div, #login {
   display: block;
   color: #666 !important;
   text-align: center;
@@ -41,7 +41,7 @@ nav li div {
   text-decoration: none;
 }
 
-nav li a:hover {
+nav li a:hover, #login:hover{
   background-color: #a6a6a6;
   cursor: pointer;
 }
