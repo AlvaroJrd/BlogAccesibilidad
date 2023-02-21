@@ -545,8 +545,8 @@ footer {
 #switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 3.75em;
+  height: 2.125em;
 }
 
 #switch input { 
@@ -570,10 +570,10 @@ footer {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 1.625em;
+  width: 1.625em;
+  left: 0.25em;
+  bottom: 0.25em;
   background-color:var(--color-fondo);
   -webkit-transition: .4s;
   transition: .4s;
